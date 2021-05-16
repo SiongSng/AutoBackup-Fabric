@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "autobackup-fabric",
+  "version": "${version}",
+  "name": "AutoBackup",
+  "description": "一個可以自動備份伺服器地圖的模組(Fabric)",
+  "authors": [
+    "Siongsng"
+  ],
+  "contact": {
+    "website": "https://www.rpmtw.ga",
+    "repo": "https://github.com/SiongSng/AutoBackup-Fabric"
+  },
+  "license": "MIT",
+  "environment": "server",
+  "entrypoints": {
+    "client": [
+      "siongsng.autobackup.autobackupfabric.client.AutoBackupFabricClient"
+    ],
+    "main": [
+      "siongsng.autobackup.autobackupfabric.AutoBackupFabric"
+    ]
+  },
+  "mixins": [
+    "autobackup-fabric.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.11.3",
+    "fabric": "*",
+    "minecraft": "1.16.5"
+  }
+}
